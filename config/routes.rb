@@ -11,4 +11,6 @@ Rails.application.routes.draw do
 
   post '/login', to: 'sessions#create'
 
+  get '/delete-account', to: 'users#destroy'
+
 end
