@@ -1,6 +1,10 @@
 class PhotosController < ApplicationController
-  def index
 
+  before_action :find_user
+
+  def index
+    photos = @user.photos
+    render json: photos
   end
 
   def show
@@ -8,6 +12,14 @@ class PhotosController < ApplicationController
   end
 
   def destroy
-    
+
   end
+
+
+  private
+
+  def find_user
+    @user = User.find(params[:user_id])
+  end
+
 end

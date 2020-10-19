@@ -12,5 +12,7 @@ class SessionsController < ApplicationController
   def destroy 
     if session[:user_id]
         reset_session
+    end 
   end
+  
 end
