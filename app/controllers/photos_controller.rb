@@ -11,6 +11,15 @@ class PhotosController < ApplicationController
 
   end
 
+  def create
+    if @user
+      photo = Photo.create(img_url: params[:img_src])
+      @user.photos << photo
+      @user.save
+      render json: @user
+    end
+  end
+
   def destroy
 
   end
