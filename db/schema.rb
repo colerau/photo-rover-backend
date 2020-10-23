@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_22_054215) do
+ActiveRecord::Schema.define(version: 2020_10_23_025503) do
 
   create_table "photos", force: :cascade do |t|
     t.integer "nasa_photo_id"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2020_10_22_054215) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "img_url"
+    t.string "img_src"
   end
 
   create_table "users", force: :cascade do |t|

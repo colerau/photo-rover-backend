@@ -13,7 +13,7 @@ class PhotosController < ApplicationController
 
   def create
     if @user
-      photo = Photo.create(img_url: params[:img_src])
+      photo = Photo.create(img_src: params[:img_src])
       @user.photos << photo
       @user.save
       render json: @user
