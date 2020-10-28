@@ -20,14 +20,17 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    user = User.find(params[:id])
-    user.destroy
+    user = User.find(params[:userId])
+    if user
+      user.destroy
+      render json: {"success": "true"}
+    end
   end
 
 
-  private 
+  private
 
   def user_params
-      params.require(:user).permit(:username)
+      params.require(:user).permit(:username, :id, :user_id, :userId)
   end
 end 

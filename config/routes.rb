@@ -7,10 +7,10 @@ Rails.application.routes.draw do
 
   resources :photos
 
-  get '/logout', to: 'sessions#destroy'
+  post '/logout', to: 'sessions#destroy'
 
   post '/login', to: 'sessions#create'
 
-  get '/delete-account', to: 'users#destroy'
+  post '/delete-account', to: 'users#destroy'
 
 end

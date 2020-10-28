@@ -22,6 +22,10 @@ class SessionsController < ApplicationController
   def destroy 
     if session[:user_id]
         reset_session
+        render json: {"logOut": "session"}
+    else
+        reset_session
+        render json: {"logOut": "no session"}
     end 
   end
   
