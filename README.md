@@ -2,6 +2,8 @@
 
 ## With Photo Rover, you can view a daily-updating list of pictures straight from NASA's Curiosty Mars rover. 
 
+This app is a Ruby on Rails JSON API. 
+
 To see more photos, click on New Earth Date in the header, then type in a date in the format YYYY/MM/DD. 
 
 Check out the tutorial to learn more!
